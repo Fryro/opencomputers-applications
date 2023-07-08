@@ -12,6 +12,9 @@ local version = "v1.0"
  
 local rsFace = sides.front
 local all_colors = {colors.white, colors.orange, colors.magenta, colors.lightblue, colors.yellow, colors.lime, colors.pink, colors.gray, colors.silver, colors.cyan, colors.purple, colors.blue, colors.brown, colors.green, colors.red, colors.black}
+
+-- For Turbines: 1 = OFF (Signal Inverted for Safety Fallbacks)
+-- For Reactor: 1 = ON (Reactor is OFF on startup)
 local turbineStates = {1, 1, 1, 1, 0}
  
  
