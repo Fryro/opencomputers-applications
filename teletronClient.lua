@@ -42,6 +42,14 @@ local function radio_dim3(guiID, radioID, status)
     target = 3
 end
  
+local function radio_dim4(guiID, radioID, status)
+    target = 4
+end
+ 
+local function radio_dim5(guiID, radioID, status)
+    target = 5
+end
+ 
 local function initialize_teleport(guiID, buttonID)
     recallDisk()
     os.sleep(2)
@@ -56,7 +64,7 @@ end
 -- Begin: User Functions
 function recallDisk()
     turnOffRedstone()
-    os.sleep(5)
+    os.sleep(2)
     rs.setBundledOutput(rsFace, colors.red, 40)
     os.sleep(1)
     rs.setBundledOutput(rsFace, colors.red, 0)
@@ -88,10 +96,14 @@ radio_dim0 = gui.newRadio(mainGui, 1, 5, radio_dim0)
 radio_dim1 = gui.newRadio(mainGui, 37, 5, radio_dim1)
 radio_dim2 = gui.newRadio(mainGui, 1, 8, radio_dim2)
 radio_dim3 = gui.newRadio(mainGui, 37, 8, radio_dim3)
+radio_dim4 = gui.newRadio(mainGui, 37, 8, radio_dim4)
+radio_dim5 = gui.newRadio(mainGui, 37, 8, radio_dim5)
 label_dim0 = gui.newLabel(mainGui, 5, 5, "Earth", 0xc0c0c0, 0x0, 7)
 label_dim1 = gui.newLabel(mainGui, 41, 5, "Phobos", 0xc0c0c0, 0x0, 7)
-label_dim2 = gui.newLabel(mainGui, 5, 8, "Dimension 2", 0xc0c0c0, 0x0, 7)
-label_dim3 = gui.newLabel(mainGui, 41, 8, "Dimension 3", 0xc0c0c0, 0x0, 7)
+label_dim2 = gui.newLabel(mainGui, 5, 8, "Asteroid Base", 0xc0c0c0, 0x0, 7)
+label_dim3 = gui.newLabel(mainGui, 41, 8, "Callisto", 0xc0c0c0, 0x0, 7)
+label_dim4 = gui.newLabel(mainGui, 5, 11, "Dim 5", 0xc0c0c0, 0x0, 7)
+label_dim5 = gui.newLabel(mainGui, 41, 11, "Dim 6", 0xc0c0c0, 0x0, 7)
 init_tp_button = gui.newButton(mainGui, 30, 20, "init_tp_button", initialize_teleport)
 hline_1 = gui.newHLine(mainGui, 1, 18, 75)
 -- End: Menu definitions
